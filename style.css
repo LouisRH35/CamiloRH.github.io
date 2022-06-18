@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35 55px rgba(0,0,0,0.1);
+}
+
+.contenedor .izquierdo{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+    width: 420px;
+}
+
+.card{
+    position: relative;
+    width: 350px;
+    height: 190px;
+    /*height: 450px;*/
+    background-image: linear-gradient(150deg, #c02425, #f0cb35,#c02425, #f0cb35);
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+    animation: fanimado 0.6s infinite;
+    background-size: 180%;
+}
+
+@keyframes fanimado{
+    0%{
+        background-position: 0% 25%;
+    }
+    25%{
+        background-position: 50% 75%;
+    }
+    50%{
+        background-position: 100% 75%;
+    }
+    75%{
+        background-position: 50% 25%;
+    }
+    100%{
+        background-position: 0% 25%;
+    }
+}
+
+.card:hover{
+    height: 450px;
+}
+
+.imgBx{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 20px;
+    overflow: hidden;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    transition: 0.5s;
+}
+
+.card:hover .imgBx{
+    width: 150px;
+    height: 150px;
+}
+
+.imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110.1%;
+    object-fit: cover;
+}
+
+.card .cont{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.card .cont .details{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(255px);
+}
+
+.card:hover .cont .details{
+    transform: translateY(0px);
+}
+
+.card .cont .details h2{
+
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+
+.card .cont .details h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.card .cont .details .th{
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+
+}
+
+.card .cont .details .data .con{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.card .cont .details .data .tx{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 0;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.contact{
+    padding-top: 50px;
+    
+}
+
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact ul{
+    position: relative;
+}
+
+.contact ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contact ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+
+.contact ul li span{
+    color: white;
+    font-weight: 300;
+    
+}
+
+.contact.educacion li{
+    margin-bottom: 15px;
+}
+
+.contact.educacion h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.contact.educacion h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+
+.contact.educacion h4{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contact.idiomas .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+    
+}
+
+.contact.idiomas .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.contenedor .derecho{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.acerca{
+    margin-bottom: 50px;
+}
+
+.acerca:last-child{
+    margin-bottom: 0;
+}
+
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p{
+    color: #333;
+}
+
+.acerca .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.acerca .box .year{
+    min-width: 150px;
+}
+
+.acerca .box .year h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+.acerca .box .text h4{
+    color: #2a7da2;
+    font-size: 16px;
+}
+
+.habilidades .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+}
+
+.habilidades .box h4{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+
+.habilidades .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.habilidades .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.Intereses ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.Intereses ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+@media (max-width: 1000px){
+    .contenedor{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .Intereses{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .acerca .box {
+        flex-direction: column;
+    }
+    .acerca .box .year{
+        margin-bottom: 5px;
+    }
+    .Intereses ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .habilidades .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
